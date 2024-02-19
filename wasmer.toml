@@ -1,0 +1,12 @@
+[package]
+name = "artech-git/astro-starter-site"
+version = "0.2.4"
+description = "Astro.dev Wasmer starter package"
+readme = "README.md"
+repository = "https://github.com/artech-git/astro-starter-site"
+
+[dependencies]
+"wasmer/static-web-server" = "*"
+
+[fs]
+public = "dist"

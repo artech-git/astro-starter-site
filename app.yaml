@@ -1,0 +1,3 @@
+kind: wasmer.io/App.v0
+name: artech-git-astro-starter-site
+package: artech-git/astro-starter-site
