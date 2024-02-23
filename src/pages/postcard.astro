@@ -1,0 +1,62 @@
+---
+// import { Head } from 'astro/components';
+import ProjectCard from '../components/ProjectCard.astro';
+import Header from '../components/Header.astro';
+import Intro from '../components/Intro.astro';
+
+export const title = 'Welcome, Prabhat here';
+export const symbol = ""; 
+export const description = 'Showcasing my skills and projects';
+---
+
+<!-- <title>{title}</title> -->
+<head>
+  <meta name="description" content="{description}" />
+  <link rel="stylesheet" href="tailwind.css" />
+</head>
+
+<style> 
+
+  /* main {
+      margin: auto;
+      padding: 1rem;
+      width: 800px;
+      max-width: calc(100% - 2rem);
+      color: white;
+      font-size: 20px;
+      line-height: 1.6;
+    } */
+
+</style>
+
+<main class="container mx-auto px-4">
+  <Header title="Welcome, Prabhat here..."/>
+  <Intro/>
+  <section class="static flex flex-col mt-12 space-x-4 space-y-4">
+    <h2 class="flex align-top text-2xl font-bold mb-4">Projects</h2>
+    <div class="flex flex-row space-x-9 mt-12">
+      <ProjectCard title="Project 1" description="A brief description of your project" image="./public/img1" link="google.com"/>
+      <ProjectCard title="Project 2" description="Another project description" image="./public/img1" link="google.com"/>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
+    <p class="text-gray-700">
+      Contact me using this form or through my social media profiles.
+    </p>
+    <form class="flex flex-col space-y-2">
+      <label for="name">Name</label>
+      <input type="text" id="name" class="px-3 py-2 rounded border border-gray-300 focus:border-sky-500" />
+      <label for="email">Email</label>
+      <input type="email" id="email" class="px-3 py-2 rounded border border-gray-300 focus:border-sky-500" />
+      <label for="message">Message</label>
+      <textarea id="message" class="px-3 py-2 rounded border border-gray-300 focus:border-sky-500"></textarea>
+      <button type="submit" class="mt-4 bg-sky-500 text-white px-4 py-2 rounded hover:bg-sky-700">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="text-center py-8">
+    © {new Date().getFullYear()} {title}
+  </footer>
+</main>
